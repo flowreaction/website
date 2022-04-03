@@ -213,6 +213,10 @@ vbase
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  title: 'Some Page',
+})
+</script>
 
 <style scoped></style>

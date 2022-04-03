@@ -1,19 +1,21 @@
 <template>
   <header
-    class="h-12 w-screen border-b-4 border-gray-800 dark:border-cyan-300 dark:text-cyan-100 md:fixed md:h-16"
+    class="h-12 w-screen border-b-4 border-gray-800 bg-white dark:border-cyan-300 dark:bg-slate-800 dark:text-cyan-100 md:fixed md:h-16"
   >
     <div class="container flex h-full justify-between md:justify-start">
-      <div class="mr-4 flex h-full items-center">
-        <h1 class="font-mono text-2xl md:text-3xl md:first-letter:text-4xl">
-          Florian Bopp
-        </h1>
-        <span
-          class="animate-caret font-mono font-extrabold text-pink-500 [text-shadow:0px_0px_8px_rgba(0,255,255,0.5)] md:text-3xl"
-          >_</span
-        >
-      </div>
+      <NuxtLink href="/">
+        <div class="mr-4 flex h-full items-center">
+          <h1 class="font-mono text-2xl md:text-3xl md:first-letter:text-4xl">
+            Florian Bopp
+          </h1>
+          <span
+            class="animate-caret font-mono text-2xl font-extrabold text-pink-500 [text-shadow:0px_0px_8px_rgba(0,255,255,0.5)] md:text-3xl"
+            >_</span
+          >
+        </div>
+      </NuxtLink>
       <div
-        class="fixed inset-x-0 bottom-0 flex justify-around border-t-4 border-gray-800 bg-white py-2 transition dark:border-cyan-300 dark:bg-slate-800 md:static md:mb-0 md:ml-8 md:grow md:items-center md:justify-start md:gap-2 md:border-0"
+        class="fixed inset-x-0 bottom-0 flex justify-around border-t-4 border-gray-800 bg-white py-2 dark:border-cyan-300 dark:bg-slate-800 md:static md:mb-0 md:ml-8 md:grow md:items-center md:justify-start md:gap-2 md:border-0"
       >
         <NuxtLink
           :href="link.href"

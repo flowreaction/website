@@ -7,6 +7,6 @@
 
 @layer base {
   body {
-    @apply bg-white text-black transition dark:bg-slate-800 dark:text-white;
+    @apply bg-white text-black  dark:bg-slate-800 dark:text-white;
   }
 }
