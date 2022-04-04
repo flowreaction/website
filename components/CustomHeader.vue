@@ -25,10 +25,8 @@
           >{{ link.text }}</NuxtLink
         >
       </div>
-      <div
-        class="flex h-1/2 w-10 items-center self-center justify-self-end md:w-12"
-      >
-        <Rive class="w-[50px]" />
+      <div class="flex h-1/2 items-center self-center justify-self-end">
+        <ColorSwitch class="w-12" />
       </div>
     </div>
   </header>

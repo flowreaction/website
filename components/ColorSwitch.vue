@@ -1,5 +1,10 @@
 <template>
-  <canvas @click="handleClick" ref="canvas" width="500" height="250"></canvas>
+  <canvas
+    @click="handleClick"
+    ref="canvas"
+    :width="computedWidth"
+    :height="computedHeight"
+  ></canvas>
 </template>
 
 <script>
@@ -22,43 +27,16 @@ export default {
       type: String,
       default: 'TopLeft',
     },
-    // size: {
-    //   type: String,
-    //   default: 'xl',
-    //   validator(value) {
-    //     return ['xs', 's', 'm', 'l', 'xl', '2xl'].includes(value)
-    //   },
-    // },
   },
   emits: ['modeswitch'],
   data() {
     return {
       riveInstance: null,
-      // riveInput: {},
+      computedWidth: 0,
+      computedHeight: 0,
     }
   },
-  computed: {
-    // width() {
-    //   return this.size === 'xs'
-    //     ? 20
-    //     : this.size === 's'
-    //     ? 40
-    //     : this.size === 'm'
-    //     ? 60
-    //     : this.size === 'l'
-    //     ? 80
-    //     : this.size === 'xl'
-    //     ? 100
-    //     : this.size === '2xl'
-    //     ? 120
-    //     : 0
-    // },
-  },
-  watch: {
-    input: function (newVal) {
-      this.riveInput.value.value = newVal
-    },
-  },
+
   methods: {
     handleClick() {
       this.riveInput.value = !this.riveInput.value
@@ -73,10 +51,6 @@ export default {
         layout: new Layout({
           fit: this.$props.fit,
           alignment: this.$props.alignment,
-          // minX: 0,
-          // minY: 0,
-          // maxX: 100,
-          // maxY: 100,
         }),
         autoplay: true,
         stateMachines: 'default',
@@ -92,12 +66,17 @@ export default {
   setup() {
     const mode = useColorMode()
     const riveInput = null
+
     return {
       mode,
       riveInput,
     }
   },
   mounted() {
+    console.log(window.getComputedStyle(this.$refs.canvas).height)
+    this.computedWidth =
+      parseInt(window.getComputedStyle(this.$refs.canvas).width) * 2
+    this.computedHeight = this.computedWidth / 2
     this.newRive()
   },
   updated() {
