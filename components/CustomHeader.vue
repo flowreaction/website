@@ -59,7 +59,7 @@ onUpdated(() => {
 })
 
 const activeClasses = computed(() => {
-  return 'bg-pink-600 text-white hover:text-white border-2 border-gray-800 dark:border-white'
+  return 'bg-pink-600 text-white hover:text-white  shadow-[inset_0px_0px_0px_2px_rgba(0,0,0,1)] dark:shadow-[inset_0px_0px_0px_2px_rgba(103,232,249,1)]'
 })
 </script>
 
