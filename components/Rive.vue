@@ -1,10 +1,5 @@
 <template>
-  <canvas
-    @click="handleClick"
-    ref="canvas"
-    :height="width / 2"
-    :width="width"
-  ></canvas>
+  <canvas @click="handleClick" ref="canvas" width="500" height="250"></canvas>
 </template>
 
 <script>
@@ -17,23 +12,23 @@ export default {
     src: {
       type: String,
       default:
-        'https://public.rive.app/community/runtime-files/2386-4790-light-to-dark-mode-switch.riv',
+        'https://public.rive.app/community/runtime-files/2386-4792-light-to-dark-mode-switch.riv',
     },
     fit: {
       type: String,
-      default: 'fitWidth',
+      default: 'fill',
     },
     alignment: {
       type: String,
       default: 'TopLeft',
     },
-    size: {
-      type: String,
-      default: 's',
-      validator(value) {
-        return ['xs', 's', 'm', 'l', 'xl', '2xl'].includes(value)
-      },
-    },
+    // size: {
+    //   type: String,
+    //   default: 'xl',
+    //   validator(value) {
+    //     return ['xs', 's', 'm', 'l', 'xl', '2xl'].includes(value)
+    //   },
+    // },
   },
   emits: ['modeswitch'],
   data() {
@@ -43,21 +38,21 @@ export default {
     }
   },
   computed: {
-    width() {
-      return this.size === 'xs'
-        ? 20
-        : this.size === 's'
-        ? 40
-        : this.size === 'm'
-        ? 60
-        : this.size === 'l'
-        ? 80
-        : this.size === 'xl'
-        ? 100
-        : this.size === '2xl'
-        ? 120
-        : 0
-    },
+    // width() {
+    //   return this.size === 'xs'
+    //     ? 20
+    //     : this.size === 's'
+    //     ? 40
+    //     : this.size === 'm'
+    //     ? 60
+    //     : this.size === 'l'
+    //     ? 80
+    //     : this.size === 'xl'
+    //     ? 100
+    //     : this.size === '2xl'
+    //     ? 120
+    //     : 0
+    // },
   },
   watch: {
     input: function (newVal) {
@@ -77,7 +72,7 @@ export default {
         src: this.$props.src,
         layout: new Layout({
           fit: this.$props.fit,
-          // alignment: this.$props.alignment,
+          alignment: this.$props.alignment,
           // minX: 0,
           // minY: 0,
           // maxX: 100,
