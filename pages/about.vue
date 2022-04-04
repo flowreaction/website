@@ -1,5 +1,6 @@
 vbase
 <template>
+  <AniHead class="w-1/2" />
   <div>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel obcaecati
     officiis praesentium? Velit tenetur nobis illo dignissimos nihil tempore
@@ -214,6 +215,7 @@ vbase
 </template>
 
 <script setup lang="ts">
+import AniHead from '~~/components/AniHead.vue'
 definePageMeta({
   title: 'Some Page',
 })
