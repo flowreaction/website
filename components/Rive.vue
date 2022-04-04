@@ -12,7 +12,7 @@ export default {
     src: {
       type: String,
       default:
-        'https://public.rive.app/community/runtime-files/2386-4792-light-to-dark-mode-switch.riv',
+        'https://public.rive.app/community/runtime-files/2386-4793-light-to-dark-mode-switch.riv',
     },
     fit: {
       type: String,

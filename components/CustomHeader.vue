@@ -21,7 +21,7 @@
           :href="link.href"
           v-for="link in links"
           :activeClass="activeClasses"
-          class="px-2 py-1 hover:text-pink-500"
+          class="px-2 py-1 transition duration-300 ease-in-out hover:text-pink-500"
           >{{ link.text }}</NuxtLink
         >
       </div>
@@ -59,7 +59,7 @@ onUpdated(() => {
 })
 
 const activeClasses = computed(() => {
-  return 'bg-pink-600 text-white hover:text-white  shadow-[inset_0px_0px_0px_2px_rgba(0,0,0,1)] dark:shadow-[inset_0px_0px_0px_2px_rgba(103,232,249,1)]'
+  return 'bg-pink-600 text-white hover:text-white  shadow-[inset_0px_0px_0px_2px_rgba(0,0,0,1)] dark:shadow-[inset_0px_0px_0px_2px_rgba(255,255,255,1)]'
 })
 </script>
 
