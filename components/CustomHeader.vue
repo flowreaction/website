@@ -38,12 +38,12 @@
 <script setup lang="ts">
 const links = ref([
     {
-        text: 'Projects',
-        href: '/projects',
-    },
-    {
         text: 'Blog',
         href: '/blog',
+    },
+    {
+        text: 'Projects',
+        href: '/projects',
     },
     {
         text: 'About',

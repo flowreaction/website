@@ -1,7 +1,7 @@
 vbase
 <template>
     <div>
-        <AniHead class="w-[500px]" />
+        <AniHead class="mx-auto w-[250px] md:ml-0 md:w-[500px]" />
         <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel
             obcaecati officiis praesentium? Velit tenetur nobis illo dignissimos

@@ -12,7 +12,7 @@ import { Rive, Layout, Fit, Alignment } from '@rive-app/canvas-single'
 
 const src =
     'https://public.rive.app/community/runtime-files/2396-4820-animated-head.riv'
-const canvas = ref(null)
+const canvas = ref(null) // reference to canvas element
 const riveInstance = ref(null)
 const riveInputs = {
     isHappy: null,
@@ -34,8 +34,10 @@ const canvasCenter = computed(() => {
 
 watch([mouse.x, mouse.y], ([newX, newY]) => {
     //   console.log(`x: ${newX} y: ${newY}`)
-    riveInputs.y.value = newY - canvasCenter.value.y
-    riveInputs.x.value = newX - canvasCenter.value.x
+    if (canvas.value) {
+        riveInputs.y.value = newY - canvasCenter.value.y
+        riveInputs.x.value = newX - canvasCenter.value.x
+    }
 })
 
 onMounted(() => {
