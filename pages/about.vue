@@ -1,6 +1,6 @@
 vbase
 <template>
-  <AniHead class="w-1/2" />
+  <AniHead class="w-[500px]" />
   <div>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel obcaecati
     officiis praesentium? Velit tenetur nobis illo dignissimos nihil tempore

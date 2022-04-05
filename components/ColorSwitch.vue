@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { Rive, Layout } from '@rive-app/webgl'
+import { Rive, Layout } from '@rive-app/canvas-single'
 import { useColorMode } from '@vueuse/core'
 
 export default {

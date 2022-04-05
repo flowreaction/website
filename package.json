@@ -13,7 +13,8 @@
     "prettier-plugin-tailwindcss": "^0.1.8"
   },
   "dependencies": {
-    "@rive-app/webgl": "^1.0.34",
+    "@rive-app/canvas-single": "^1.0.35",
+    "@rive-app/webgl-single": "^1.0.35",
     "@vueuse/core": "^8.2.3",
     "vue": "^3.2.31"
   }
