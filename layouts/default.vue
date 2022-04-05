@@ -1,21 +1,24 @@
 <template>
-  <CustomHeader class="top-0" />
-  <main class="container mt-6 md:mt-24">
-    <slot></slot>
-  </main>
+    <div>
+        <CustomHeader class="top-0" />
+        <main class="container mt-6 md:mt-24">
+            <slot></slot>
+        </main>
+    </div>
 </template>
 
 <script setup>
 const route = useRoute()
 onUpdated(() => {
-  console.log(route)
+    console.log(route)
 })
 useMeta({
-  title: computed(() => {
-    return `Florian Bopp - ${
-      route.name.charAt(0).toUpperCase() + route.name.substring(1).toLowerCase()
-    }`
-  }),
+    title: computed(() => {
+        return `Florian Bopp - ${
+            route.name.charAt(0).toUpperCase() +
+            route.name.substring(1).toLowerCase()
+        }`
+    }),
 })
 </script>
 
